@@ -9,7 +9,7 @@ Created on Tue Jun 10 18:12:00 2025
 from rdflib import Graph, RDF, RDFS, OWL
 
 # Load the OWL file
-owl_file_path = "input.owl"
+owl_file_path = "data/input.owl"
 g = Graph()
 g.parse(owl_file_path, format="xml")
 
@@ -58,7 +58,7 @@ html_document = f"""
 """
 
 # Save to file
-output_file = "Visualisation_OWL_individuals_with_classes.html"
+output_file = "docs/Visualisation_OWL_individuals_with_classes.html"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(html_document)
 

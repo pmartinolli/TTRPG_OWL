@@ -11,7 +11,7 @@ Created on Tue Jun 10 13:31:13 2025
 from rdflib import Graph, RDF, RDFS, OWL
 
 # Reload the OWL file
-owl_file_path = "input.owl"
+owl_file_path = "data/input.owl"
 g = Graph()
 g.parse(owl_file_path, format="xml")
 
@@ -85,7 +85,7 @@ html_document = f"""
 """
 
 # Save to file
-html_output_path = "Visualisation_OWL_class_tree_with_individuals.html"
+html_output_path = "docs/Visualisation_OWL_class_tree_with_individuals.html"
 with open(html_output_path, "w", encoding="utf-8") as f:
     f.write(html_document)
 

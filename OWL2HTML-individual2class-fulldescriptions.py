@@ -37,7 +37,7 @@ def markdown_to_html(md_text):
 DC = Namespace("http://purl.org/dc/elements/1.1/")
 
 # Load RDF/OWL file
-owl_file_path = "input.owl"
+owl_file_path = "data/input.owl"
 g = Graph()
 g.parse(owl_file_path, format="xml")
 
@@ -155,7 +155,7 @@ html_document = f"""
 """
 
 # Save HTML to file
-output_file = "Visualisation_OWL_individuals_with_fulldescriptions.html"
+output_file = "docs/Visualisation_OWL_individuals_with_fulldescriptions.html"
 with open(output_file, "w", encoding="utf-8") as f:
     f.write(html_document)
 
