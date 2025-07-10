@@ -53,12 +53,17 @@ for s in g.subjects(RDF.type, OWL.NamedIndividual):
 def tree_to_html_with_individuals(tree):
     uri = tree['name']
     label = label_lookup.get(uri, uri.split("/")[-1])
+    
     individuals = individuals_by_class.get(uri, [])
-    individual_text = f": <sup><br> - {';<br> - '.join(individuals)}</sup>" if individuals else ""
-    html = f"<li>{label}{individual_text}"
+    individual_text = f''': 
+        <details class="accordion-desc">
+        - {';<br> - '.join(individuals)}
+        </details>''' if individuals else ""
+    
+    html = f"<li>{label}{individual_text}\n"
     if tree['children']:
-        html += "<ul>" + "".join(tree_to_html_with_individuals(child) for child in tree['children']) + "</ul>"
-    html += "</li>"
+        html += "<ul>" + "".join(tree_to_html_with_individuals(child) for child in tree['children']) + "</ul>\n"
+    html += "</li>\n"
     return html
 
 # Generate HTML tree
@@ -70,17 +75,30 @@ html_document = f"""
 <html>
 <head>
     <meta charset="utf-8">
-    <title>OWL Class Hierarchy with Individuals</title>
+    <title>TTRPG OWL Class Hierarchy with Individuals</title>
     <style>
         body {{ font-family: Arial, sans-serif; }}
         ul {{ list-style-type: none; }}
         li::before {{ content: "📂 "; }}
+        
+        /* Accordion just for description */
+        .accordion-desc {{
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 8px;
+            margin-left: 5em;
+            background: #f9f9f9;
+            padding: 0.25em 0.5em;
+            font-size: small;
+        }}
     </style>
 </head>
 <body>
-    <h1>OWL Class Hierarchy with Individuals</h1>
+    <h1>TTRPG OWL Class Hierarchy with Individuals</h1>
+    <p><a href="index.html">More information</a></p>
+    <p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> OWL Class Hierarchy with Individuals, Pascal Martinolli, 2025.</p>
+
     {html_tree}
-<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> Pascal Martinolli</p>
 </body>
 </html>
 """

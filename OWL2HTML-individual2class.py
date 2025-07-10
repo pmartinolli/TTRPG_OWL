@@ -43,7 +43,7 @@ html_document = f"""
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Individuals and Their Classes</title>
+    <title>TTRPG Individuals and Their Classes</title>
     <style>
         body {{ font-family: Arial, sans-serif; }}
         ul {{ list-style-type: none; }}
@@ -51,9 +51,11 @@ html_document = f"""
     </style>
 </head>
 <body>
-    <h1>Individuals and Their Classes</h1>
+    <h1>TTRPG Individuals and Their Classes</h1>
+    <p><a href="index.html">More information</a></p>
+    <p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> Pascal Martinolli</p>
+
     {html_list}
-<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> Pascal Martinolli</p>
 </body>
 </html>
 """

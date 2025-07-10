@@ -148,9 +148,11 @@ html_document = f"""
 
 </head>
 <body>
-    <h1>Individuals and Their Classes</h1>
+    <h1>TTRPG Individuals and Their Classes With Descriptions</h1>
+    <p><a href="index.html">More information</a></p>
+    <p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a>Individuals and Their Classes, Pascal Martinolli, 2025.</p>
+
     {html_list}
-<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> Pascal Martinolli</p>
 </body>
 </html>
 """
