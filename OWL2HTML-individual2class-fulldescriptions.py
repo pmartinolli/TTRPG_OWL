@@ -150,7 +150,7 @@ html_document = f"""
 <body>
     <h1>Individuals and Their Classes</h1>
     {html_list}
-<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0 Pascal Martinolli</a></p>
+<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0</a> Pascal Martinolli</p>
 </body>
 </html>
 """
