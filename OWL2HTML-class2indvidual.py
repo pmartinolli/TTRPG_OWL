@@ -80,6 +80,7 @@ html_document = f"""
 <body>
     <h1>OWL Class Hierarchy with Individuals</h1>
     {html_tree}
+<p><a href="https://creativecommons.org/licenses/by/4.0/deed.en">CC-BY 4.0 Pascal Martinolli</a></p>
 </body>
 </html>
 """
