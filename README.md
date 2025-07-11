@@ -1,6 +1,9 @@
 # TTRPG_OWL
-An anthology of game designs in TTRPG
+An anthology of game designs in tabletop role-playing games.
 
+Visualisations : https://pmartinolli.github.io/TTRPG_OWL/
+
+(work in progress)
 
 # How to
 
